@@ -19,7 +19,7 @@ class ImovelSchema extends Schema {
       table.string('address').notNullable()
       table.decimal('price').notNullable()
       table.decimal('latitude', 9,6).notNullable()
-      table.decimal('longitude, 9,6').notNullable()
+      table.decimal('longitude', 9,6).notNullable()
 
       table.timestamps()
     })

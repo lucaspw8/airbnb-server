@@ -23,3 +23,11 @@ Route.get('/', () => {
 Route.post('/users', 'UserController.create')
 
 Route.post('/sessions', 'SessionController.create')
+
+
+//Rotas para o Imovel
+Route.resource('imoveis','imovelController').apiOnly().middleware('auth')
+
+//Rotas para image
+Route.post('imoveis/:id/images', 'ImageController.store').middleware('auth')
+Route.get('images/:path', 'imageController.show')
